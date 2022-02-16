@@ -1,0 +1,19 @@
+{
+    "ts-node": {
+      "files": true
+    },
+    "compilerOptions": {
+      "target": "es2018",
+      "moduleResolution": "node",
+      "lib": ["es2018", "dom"],
+      "types": ["cypress", "node"],
+      "esModuleInterop": true,
+      "module": "commonjs",
+      "strictNullChecks": true,
+      "noImplicitAny": true,
+      "noUnusedLocals": false,
+      "noUnusedParameters": false,
+      "baseUrl": "./",
+      "rootDir": "./"
+    }
+  }
