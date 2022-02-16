@@ -12,4 +12,16 @@ export class CypressAdapter implements IWebAutomation {
   doVisit(url: string): void {
     cy.visit(url)
   }
+
+  doSetEnv(env: string): string {
+    return Cypress.env(env)
+  }
+
+  doFill(locator: string, text: string): void {
+    cy.get(locator, { timeout: Cypress.env('TIMEOUT') }).type(text)
+  }
+
+  doClick(locator: string): void {
+    cy.get(locator, { timeout: Cypress.env('TIMEOUT') }).click({ force: true })
+  }
 }

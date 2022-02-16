@@ -4,4 +4,10 @@ export interface IWebAutomation {
   doTest(title: string, callback: any): void
 
   doVisit(url: string): void
+
+  doSetEnv(env: string): string
+
+  doFill(locator: string, text: string): void
+
+  doClick(locator: string): void
 }

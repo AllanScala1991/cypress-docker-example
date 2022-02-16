@@ -17,6 +17,18 @@ class WebAutomation implements IWebAutomation {
   doVisit(url: string): void {
     this.adapter.doVisit(url)
   }
+
+  doSetEnv(env: string): string {
+    return this.adapter.doSetEnv(env)
+  }
+
+  doFill(locator: string, text: string): void {
+    this.adapter.doFill(locator, text)
+  }
+
+  doClick(locator: string): void {
+    this.adapter.doClick(locator)
+  }
 }
 
 export default new WebAutomation()
