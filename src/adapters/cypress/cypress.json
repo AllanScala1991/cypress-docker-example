@@ -1,0 +1,14 @@
+{
+  "integrationFolder": "./src/tests",
+  "fixturesFolder": false,
+  "pluginsFile": "./src/adapters/cypress/plugins",
+  "screenshotsFolder": "./src/adapters/cypress/screenshots",
+  "supportFile": "./src/adapters/cypress/support",
+  "videosFolder": "./src/adapters/cypress/videos",
+  "chromeWebSecurity": false,
+  "video": false,
+  "retries": {
+    "runMode": 1,
+    "openMode": 1
+  }
+}
