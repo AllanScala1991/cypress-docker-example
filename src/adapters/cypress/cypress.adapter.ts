@@ -31,11 +31,7 @@ export class CypressAdapter implements IWebAutomation {
     cy.get(locator, { timeout: this.TIMEOUT }).should(validator)
   }
 
-  doExpect(locator: string, validator: string): void {
-    ;`${expect(locator)}.${validator}`
-  }
-
-  doCompare(firstValue: string, secondValue: string, validator: string): void {
-    ;`${expect(firstValue)}.${validator}.${secondValue}`
+  doPageReload(): void {
+    cy.reload()
   }
 }

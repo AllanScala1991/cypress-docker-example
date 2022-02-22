@@ -34,12 +34,8 @@ class WebAutomation implements IWebAutomation {
     this.adapter.doShould(locator, validator)
   }
 
-  doExpect(locator: string, validator: string): void {
-    this.adapter.doExpect(locator, validator)
-  }
-
-  doCompare(firstValue: string, secondValue: string, validator: string): void {
-    this.adapter.doCompare(firstValue, secondValue, validator)
+  doPageReload(): void {
+    this.adapter.doPageReload()
   }
 }
 

@@ -13,7 +13,5 @@ export interface IWebAutomation {
 
   doShould(locator: string, validator: string): void
 
-  doExpect(locator: string, validator: string): void
-
-  doCompare(firstValue: string, secondValue: string, validator: string): void
+  doPageReload(): void
 }
