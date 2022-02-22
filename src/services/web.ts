@@ -29,6 +29,18 @@ class WebAutomation implements IWebAutomation {
   doClick(locator: string): void {
     this.adapter.doClick(locator)
   }
+
+  doShould(locator: string, validator: string): void {
+    this.adapter.doShould(locator, validator)
+  }
+
+  doExpect(locator: string, validator: string): void {
+    this.adapter.doExpect(locator, validator)
+  }
+
+  doCompare(firstValue: string, secondValue: string, validator: string): void {
+    this.adapter.doCompare(firstValue, secondValue, validator)
+  }
 }
 
 export default new WebAutomation()

@@ -1,6 +1,8 @@
 import { IWebAutomation } from 'src/interfaces/web'
 
 export class CypressAdapter implements IWebAutomation {
+  constructor(private TIMEOUT: number = 30000) {}
+
   doDescribe(title: string, callback: any): void {
     describe(title, callback)
   }
@@ -18,10 +20,22 @@ export class CypressAdapter implements IWebAutomation {
   }
 
   doFill(locator: string, text: string): void {
-    cy.get(locator, { timeout: Cypress.env('TIMEOUT') }).type(text)
+    cy.get(locator, { timeout: this.TIMEOUT }).type(text)
   }
 
   doClick(locator: string): void {
-    cy.get(locator, { timeout: Cypress.env('TIMEOUT') }).click({ force: true })
+    cy.get(locator, { timeout: this.TIMEOUT }).click({ force: true })
+  }
+
+  doShould(locator: string, validator: string): void {
+    cy.get(locator, { timeout: this.TIMEOUT }).should(validator)
+  }
+
+  doExpect(locator: string, validator: string): void {
+    ;`${expect(locator)}.${validator}`
+  }
+
+  doCompare(firstValue: string, secondValue: string, validator: string): void {
+    ;`${expect(firstValue)}.${validator}.${secondValue}`
   }
 }

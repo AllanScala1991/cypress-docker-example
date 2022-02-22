@@ -10,4 +10,10 @@ export interface IWebAutomation {
   doFill(locator: string, text: string): void
 
   doClick(locator: string): void
+
+  doShould(locator: string, validator: string): void
+
+  doExpect(locator: string, validator: string): void
+
+  doCompare(firstValue: string, secondValue: string, validator: string): void
 }

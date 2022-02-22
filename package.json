@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "test": "cypress run --headless --browser electron --config-file src/adapters/cypress/cypress.json",
+    "test:open": "cypress open --config-file src/adapters/cypress/cypress.json",
     "prettier-start": "pretty-quick --staged"
   },
   "devDependencies": {
