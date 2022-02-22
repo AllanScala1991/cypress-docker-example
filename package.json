@@ -6,6 +6,7 @@
   "scripts": {
     "test": "cypress run --headless --browser electron --config-file src/adapters/cypress/cypress.json",
     "test:open": "cypress open --config-file src/adapters/cypress/cypress.json",
+    "build": "docker image build -t cypress-docker . && docker-compose up",
     "prettier-start": "pretty-quick --staged"
   },
   "devDependencies": {
